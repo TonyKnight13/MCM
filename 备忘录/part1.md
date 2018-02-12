@@ -1,4 +1,4 @@
-# Part 1 b
+# Part 1
 
 为了描述四个州的能源状况，首先我们通过自己定义一个描述能源整体状况的的指标。能源由于与经济、环境关系密切，当我们考虑能源时，同时加入经济和环境的影响因素。
 
@@ -134,3 +134,151 @@ summary
 A comparison of all the figures above shows that Arizona and California are similar, while new Mexico and Texas are similar. Renewable energy sources in Arizona and California account for a large proportion of renewable energy. Wind energy in New Mexico and Texas accounts for a large proportion of renewable energy.
 Due to different geography and climate in different states, Arizona mainly develops solar energy. In California, it mainly develops geothermal energy. New Mexico and Texas mainly develop wind energy.
 In addition, each state's fuel ethanol energy has a certain development.
+
+
+# part 1 C
+
+# 灰度关联分析
+
+## 简介
+
+灰色系统理论提出了对各子系统进行灰色关联度分析的概念，意图透过一定的方法，去寻求系统中各子系统（或因素）之间的数值关系。因此，灰色关联度分析对于一个系统发展变化态势提供了量化的度量，非常适合动态历程分析。
+
+Gray system theory puts forward the concept of analyzing the gray relational degree of each subsystem. It intends to seek the numerical relationship among the subsystems (or factors) in the system through certain methods.
+Therefore, gray relational analysis provides a quantitative measure of a system development trend and is very suitable for dynamic history analysis.
+【https://baike.baidu.com/item/%E7%81%B0%E8%89%B2%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90%E6%B3%95/8602076?fr=aladdin】
+
+## 计算步骤
+
+确定反映系统行为特征的参考数列和影响系统行为的比较数列。
+反映系统行为特征的数据数列，称为参考数列。影响系统行为的因素组成的数据数列，称比较数列。
+
+Identify reference sequences that reflect system behavior characteristics and comparison sequences that affect system behavior.
+The sequence of data that reflects the behavior of the system is called the reference sequence. Factors affecting the behavior of the system composed of data series, is called the comparison sequence.
+
+获得参考数列和比较数列以后，要对参考数列和比较数列进行无量纲化处理。
+由于系统中各因素的物理意义不同，导致数据的量纲也不一定相同，不便于比较，或在比较时难以得到正确的结论。因此在进行灰色关联度分析时，一般都要进行无量纲化的数据处理。
+
+After obtaining the reference sequence and the comparison sequence, the reference sequence and the comparison sequences should be treated dimensionless.
+Due to the different physical meaning of each factor in the system, the dimensionality of the data is not necessarily the same, which is not convenient for comparison, or it is difficult to get the correct conclusion in comparison. Therefore, in the analysis of grey relational degree, it is generally necessary to conduct dimensionless data processing.
+
+选取参考数列
+$ x_0 = \{x_0(k) | k=1,2,\cdots,n \} = (x_0(1), x_0(2), \cdots, x_0(n))$ 
+
+Select reference sequence
+$ x_0 = \{x_0(k) | k=1,2,\cdots,n \} = (x_0(1), x_0(2), \cdots, x_0(n))$ 
+
+
+假设有m个比较数列
+$ x_i = \{x_i(k) | k=1,2,\cdots,n\} = (x_i(1), x_i(2), \cdots, x_i(n)), i = 1,2,\cdots,m $ 
+其中k表示时刻，总共有n个时刻。
+
+Suppose there are m number of comparisons
+$ x_i = \{x_i(k) | k=1,2,\cdots,n\} = (x_i(1), x_i(2), \cdots, x_i(n)), i = 1,2,\cdots,m $ 
+Where k represents the moment, a total of n moments.
+
+在计算关联系数前，先对比较数列进行无量纲化处理。常见的无量纲化方法有均值化法和初始化法。
+我们采用的是初始化法：
+
+$ x_i(k) = \frac{x_i'(k)}{\frac{1}{m} \sum\limits_{k=1}^m x'i(k)}  i = 0,1,\cdots,k $
+这里 $x_i'(k)$ 表示刚筛选出的比较数列。 $x_i(k)$ 是处理后的新比较数列。
+
+Before calculating the correlation coefficient, the comparison sequence need to be treated dimensionless. The common dimensionless methods are mean method and initialization method.
+What we use is the initialization method.
+Here $ x_i '(k) $ indicates the comparison sequence just screened. $ x_i (k) $ is the new processed comparison sequence.
+
+之后可以计算出参考数列与比较数列的灰色关联系数$r_i(k)$, 所谓关联系数，实质上是曲线间几何形状的差别程度。因此曲线间差值大小，可作为关联程度的衡量尺度。对于一个参考数列 $x_0$ 有若干个比较数列$x_1, x_2, \cdots, x_m$，各比较数列与参考数列在各个时刻（即曲线中的各点）的关联系数$r_i(k)$可由下列公式算出：其中 ρ为分辨系数，一般在0~1之间，通常取0.5。
+
+After that, the gray correlation coefficient $r_i(k)$ between the reference sequence and the comparison sequence can be calculated.
+The so-called correlation coefficient, is substantially between degree of difference curve geometry. Therefore, the size of the difference between the curves can be used as a measure of the degree of association
+For a reference sequence $ x_0 $, there are several comparison sequences $ x_1, x_2, \ cdots, x_m $. The correlation coefficient $ r_i (k) $ of each comparison sequence and the reference sequence at each moment (ie, points in the curve) can be calculated by following formula: Where $\rho$ is the resolution coefficient, generally between 0 to 1, usually take 0.5.
+
+$ r_i(k) = \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| $
+
+$ |x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| $
+
+$ r_i(k) = \frac{\min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|}{|x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|} $
+$ k = 1,2,\cdots, k $
+
+
+该式子中 $\min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|, \max\limits_{i} \max\limits_{k}| x_0(k) - x_i(k)|$ 分别为两级最小差及两级最大差。
+式中$\rho$ 为分辨系数, 一般在(0, 1)内取值，若 $\rho$越小，关联系数间的差异就越大，区分能力就越强。通常取0.5。
+
+In the formula, $ \ min \ limits_ {i} \ min \ limits_ {k} | x_0 (k) - x_i (k) |, max \ limits_ {i} \ max \ limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
+<!-- 两级最小差及两级最大差 -->
+Where $ \ rho $ is the resolution coefficient, which is usually taken as (0, 1). The smaller the $ \ rho $, the greater the difference between the correlation coefficients and the stronger the ability to distinguish. Usually take 0.5.
+
+式中定义的关联系数是描述比较数列与参考数列在某时刻关联程度的一种指标，由于各个时刻都有一个关联数，因此信息比较分散导致不便于比较，为此我们给出公式计算比较数列与参考数列的关联度
+
+The correlation coefficients defined in the formula describe an indicator of the correlation degree between the comparison sequence and the reference sequence at a certain time. Since there is an association number at each moment, the information is more scattered and it is not convenient to compare. Therefore, we give the formula to calculate the correlation between the comparison sequence and the reference sequence:
+
+$ r_i = \frac{1}{n}\sum\limits_{k=1}^{n}r_i(k) $
+
+根据该式计算出各个比较数列的关联度并排序。
+
+According to the formula to calculate the relevance of each comparison series and sort.
+
+[https://www.jianshu.com/p/4ceb9a516890?from=timeline]
+[https://wenku.baidu.com/view/73609ecff12d2af90342e65a.html]
+
+
+为了方便后面问题的进一步处理，我们这里将所有的州选取相同的关联指标。首先我们选取了其中5个在所有州中都出现了的指标，然后将每个州的得到的十个主要影响指标赋予权值，根据与综合评价指标的关联度从大到小进行排序，我们从中挑选了除了上述5个指标以外最大的三个指标。所以最后我们决定采用以下8个指标:
+
+PAPRB  NAMPB  NNTCB  FFTCB  TETCB  PATCB  HTCB  WWTCB
+
+In order to facilitate the further processing of the following problems, we select the same relevant indicators for each state here.
+First of all, we select five indicators that appear in all the states, and then assign the weights of the ten main influence indicators in each state, and sort them according to their relevance to the comprehensive evaluation indicators. We pick the largest of the three indicators other than the five mentioned above. So in the end we decided to adopt the following eight indicators:
+
+PAPRB  NAMPB  NNTCB  FFTCB  TETCB  PATCB  HTCB  WWTCB
+
+然后我们对四个州的指标使用了Topsis法进行了评价，其原理为【DPS数据处理系统——实验设计、统计分析及模型优化】。
+设有n个评价对象、m个评价指标，原始数据可以写成为矩阵
+
+Then we evaluated the indicators of the four states using the Topsis method, which is based on the principle【DPS数据处理系统——实验设计、统计分析及模型优化】.
+
+There are n evaluation objects, m evaluation indicators. The original data can be written as a matrix:
+
+$ \mathbf{X} = (X_{ij})_{nm} $.
+    
+对高优、低优指标分别进行归一化变换，即
+
+The high-quality, low-quality indicators were normalized transformation, that is
+
+$ Z_{ij} = \frac{X_{ij}}{\sqrt{\sum\limits_{i=1}^{n}X_{ij}^2}} $.
+    
+归一化得到矩阵，
+
+After normalization get the matrix
+
+$ \mathbf{Z} = (Z_{ij})_{nm} $.
+
+其各列最大、最小值构成的最优、最差向量分别记为：
+
+The maximum and minimum of each column constitute the best and worst vector respectively as:
+
+$ \mathbf{Z^+} = (Z_{max1}, Z_{max2}, \cdots, Z_{maxm})$,
+$ \mathbf{Z^-} = (Z_{min1}, Z_{min2}, \cdots, Z_{minm})$.
+
+第i个评价对象与与最优、最差方案的距离分别为：
+
+The distance between the i-th evaluation object and the optimal scheme and the worst scheme is as follows:
+
+$ D_i^+ = \sqrt{ \sum\limits_{j=1}^m (Z_{maxj} - Z_{ij})^2 } $,
+$ D_i^- = \sqrt{ \sum\limits_{j=1}^m (Z_{minj} - Z_{ij})^2 } $.
+
+
+第i个评价对象与最优方案的接近程度Ci为：
+
+The approximate degree of the i-th evaluation object and the optimal scheme is $Ci$:
+
+$ C_i = D_i^- / (D_i^+ + D_i^-) $.
+    
+这里我们使用了DPS工具进行了处理，最后的结果为
+
+Here we use the DPS tool for processing, and the final result is as follows.
+    
+<!-- 表  各州Topsis评价的结果 -->
+
+如表所示,也就是说通过我们的评判标准，我们得出德克赛斯州是清洁能源状况最好的州。
+
+As the table shows, by our standards, we conclude that Texas is the best state for clean energy.
