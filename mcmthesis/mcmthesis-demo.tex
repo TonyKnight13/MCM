@@ -457,17 +457,62 @@ and
 
 According to the prediction model above, 
 
+\section{Target and Plan}
+\subsection{Target}
+
+Based on our forecast results in Sub-Model.\Rmnum{2}, we find that  the energy distribution is not balanced between states,  
+while Arizona and California consume far more energy than production, New Mexico and Texas produce far more energy than they consume.
+Therefore, we consider that if four states can achieve energy complementarity, such as energy-rich states send energy to less energy-intensive states, and the energy distribution of the four states will be relatively balanced.
+At the same time, the state with large energy consumption will be paid to the energy export state, which will bring economic benefits to the energy-rich states and improve the overall economic benefits.
+This not only improves the utilization of resources, but also brings the average economic benefit.
+So our overall goal is to make the energy status of the four states more balanced and the economic benefits to be relatively optimal.
+
+Based on this idea, we propose the following optimization model.Our optimization variable is set as energy transfer between states,such as $T_e(i,i)$, $T_s(i,j)$, where i represents a state.
+We set the goal of optimizing the proportion of renewable energy used in each of the four states as equal as possible, that is, the least variance in the use of renewable energy in the four states.
+\begin{equation}
+  \Min\left({\sigma}^2\left(\frac{E_c(i)}{S_c(i)}\right)\right)
+\end{equation}
+
+
+We set the state of energy transmission is 0, the same two states transfer each other the opposite number, so we set the transport constraints
+\begin{align}
+  T_e(i,i) &= 0 \\
+  T_e(i,j) &= -T_e(j,i) \\
+  T_S(i,i) &= 0 \\
+  T_s(i,j) &= -T_s(j,i)
+\end{align}
+
+At the same time, according to our forecasts, the total renewable energy produced by the four states is greater than the total renewable energy consumption of the four states, but the total energy consumption is slightly larger than that of production and needs to be imported from other places. Energy constraints are:
+\begin{align}
+  E_p(i) > E_c(i) \\
+  S_p(i) > S_c(i) \\
+  \sum\limits_{i}S_c(i) < \sum\limits_{i}S_p(i) 
+\end{align}
+\subsection{Plan}
+
+In response to the objective and the results of our model solution, and for short-term goals and long-term goals, the following four measures were proposed.
+
+Short-term measures until 2025:
+\begin{itemize}
+  \item Texas and New Mexico transfer excess renewable energy to Arizona and California.
+  \item Increase the transmission of renewable energy and reduce the transmission of non-renewable energy such as fossil fuels.
+\end{itemize}
+Long-term measures until 2050:
+\begin{itemize}
+  \item The states continue to vigorously develop renewable energy based on the current energy situation.
+  \item The states can approprately expand the number of cooperating states in order to achieve better project. 
+\end{itemize}
 
 \section{The Evaluation of Model}
 
 we will discuss the gray prediction model in this section.
-\subsection{Advantages}
+\subsection{Strengths}
 \begin{itemize}
   \item The model is simple and easy to implement.
   \item The model is calculated using a professional mathematical analysis software, a higher degree of feasibility.
   \item The indicators set up take into account a number of factors and are highly integrated.
 \end{itemize}
-\subsection{Disadvantages}
+\subsection{Weaknesses}
 \begin{itemize}
   \item The prediction model is too simple to predict well.
   \item For this problem, there are more external data introduced, and fewer things are created by ourself.
