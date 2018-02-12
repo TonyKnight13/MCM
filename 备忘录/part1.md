@@ -286,7 +286,7 @@ $ S = PR - PC $
 
 其中PR为能源生产，PC为能源消耗。该值代表该州该能源的富余程度，值大于0说明该州能源生产值大于消耗值，可以向其他州出口能源；值小于0说明该州能源消耗量大于生产量，需要从其他州进口能源。
 
-where PR is energy production and PC is energy consumption. This value represents the level of the state's surplus of energy, the value greater than zero indicates that the state's energy production value is greater than the consumption value, and the state can export energy to other states. Value less than zero indicates that the state energy consumption is greater than the production, and the state need to import energy from other states.
+where PR is energy production and PC is energy consumption. This value represents the level of the state's surplus of energy, the value greater than zero indicates that the state's energy production value is greater than the consumption value, which means the state can export energy to other states. Value less than zero indicates that the state energy consumption is greater than the production, which means the state need to import energy from other states.
 
 关于预测模型，我们采用灰色预测模型
 

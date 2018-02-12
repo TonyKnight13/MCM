@@ -17,6 +17,7 @@
 \usepackage{subfigure}
 \usepackage{indentfirst} 
 \usepackage{float}
+\usepackage{multirow}
 
 \setlength{\parindent}{1.5em}
 \title{}
@@ -29,13 +30,29 @@ keyword1; keyword2
 \end{abstract}
 \maketitle
 
+\newpage
+\pagestyle{fancy} 
+\rhead{\small\sffamily}
+Governors, there is no doubt that energy agreements between the states are important to achieve energy complementarity.
 
+First, we analyzed the history of energy in each of your states.  There are similar places in your states from 1960 to 2009. In the same place, the demand for energy has been increasing since the 1960s, with the continuous growth of the economy and the improvement of various industrial structures. Your states nearly consumes a large proportion of fossil energy, but it's very glad to see that from the beginning of this century to the recent years you've all developed renewable energy. This increases the proportion of renewable energy consumption to total energy consumption. 
+The difference is that due to the geographical environment, climate and other factors, the development of renewable energy in each state is different. California is good at geothermal energy development, while New Mexico and Texas develop wind energy better, while Arizona is better at developing solar and fuel ethanol.
+
+We has made the forecast for the energy usage in each state, and we concluded that without any new policy, there will be problems in the energy status of your states.
+Specifically with the development of cities, your demand for energy will be greatly improved. According to the current state of new energy development in each state, Arizona and California may face the problem of energy shortage, the energy required will be almost dependent on imported energy sources. While New Mexico and Texas will have energy surplus situation.
+Here we exaggerate the energy storage of fossil fuels, and your need for energy will be more urgent if the fossil energy is exhausted.
+
+Based on our forecasts and analysis, we will advise you on the goals of energy contracts. First of all, you should try your best to realize the comprehensive development of the energy contract. This requires you to realize the complementary resources inside the four states, to achieve maximum economic benefits. Specifically, Texas and New Mexico transfer excess renewable energy to Arizona and California.
+It is necessary to increase the transmission of renewable energy and reduce the transmission of non-renewable energy such as fossil fuels, which will make your energy structure more optimized.
+Every state should continue to vigorously develop renewable energy on the basis of the current energy situation, because it is not only an economic benefit, but also a huge impact on the environment. In addition, you can expand the number of cooperative states appropriately, which will contribute to better development.
+
+Thank you for taking the time to read this note and your tireless work.
+\newpage
 \tableofcontents
 % \thispagestyle{}% 当前页不显示页码'
 \pagestyle{fancy} 
-\rhead{\small\sffamily  \rmnum{\thepage}}
+\rhead{\small\sffamily}
 \newpage
-\pagestyle{fancy}
 \rhead{\small\sffamily Page \thepage\ of \pageref{LastPage}}
 \setcounter{page}{1}
 
@@ -54,9 +71,7 @@ As the world's superpower, the US is a big country of energy. Many of America's 
 \end{itemize}
 
 \subsection{Overview of Our Work}
-\begin{itemize}
-  \item 
-\end{itemize}
+For these issues, we plot the time series and pie charts to show the status and evolution of energy production and use in each state. We set out the state of energy of the state by setting the index of the state of energy, formulate the corresponding score standard to find the best situation at this moment, and then predict the state of the future energy of each state through the gray prediction model. Combining with the optimal standard and the forecasting result, Optimal goal model to make the state of the state of energy to achieve the best overall. Finally, we put forward our measures for long-term and short-term goals.
 
 \section{Notations and Assumptions}
 \subsection{Notations}
@@ -86,7 +101,14 @@ As the world's superpower, the US is a big country of energy. Many of America's 
 \end{table}
 
 \subsection{Assumptions}
-
+\begin{itemize}
+  \item Assume that the technology of renewable energy will not be an obstacle to the development of renewable energy.
+  \item Assume that a very significant technological breakthrough will not occur suddenly which may result in that renewable energy source can be widely and easily used.
+  \item Assume that the storage of fossil energy can meet the current trend of fossil energy production.
+  \item Assume that various energy price fluctuations will not change too much.
+  \item Assume that there will be no loss in energy transfer in the current four states.
+  \item Assume that the current energy transfer costs are the same between the four states.
+\end{itemize}
 \section{Energy Profile}
 \subsection{Overview}
 We make an energy profile for the four states from 1960 to 2009 in the past 50 years, which covers four aspects of energy consumption, energy prices, energy expenditures, energy production.As shown in the following figures.
@@ -380,6 +402,196 @@ The approximate degree of the i-th evaluation object and the optimal scheme is $
 \end{equation}
 
 Here we use the DPS tool for processing, and the final result is as follows.
+\begin{table}[H]
+\centering
+\caption{The evaluation results of state by Topsis}
+\label{Topsis}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Sample & $D^+$     & $D-$     & $C_i$     & Rank \\ \hline
+AZ     & 1.9694 & 0.7961 & 0.2879 & 4    \\ \hline
+CA     & 1.7148 & 1.4377 & 0.4561 & 2    \\ \hline
+NM     & 1.8401 & 1.4144 & 0.4346 & 3    \\ \hline
+TX     & 1.7362 & 1.574  & 0.4755 & 1    \\ \hline
+\end{tabular}
+\end{table}
+
+As the Tbl.\ref{Topsis} shows, according to our standards, we conclude that Texas is the best state for clean energy.
+
+\section{Sub-Model.\Rmnum{2} :\quad Energy Status Prediction Model}
+In terms of forecasting energy profile in 2025 and 2050,  we mainly consider overall energy assessment, and the difference value between energy production and consumption. The difference between energy production and consumption is
+\begin{equation}
+  S = PR - PC
+\end{equation}
+where PR is energy production and PC is energy consumption. This value represents the level of the state's surplus of energy, the value greater than zero indicates that the state's energy production value is greater than the consumption value, which means the state can export energy to other states. Value less than zero indicates that the state energy consumption is greater than the production, which means the state need to import energy from other states.
+
+For the prediction model, we use the gray prediction model.
+\subsection{GM(1,1)}
+We use the GM(1,1) model to forecast time-series. GM(1,1) is one of the models of gray theory, which has been 
+utilized in many areas such as the power industry\cite{}.The process of developing the model is shown below.
+    
+The sequence of time-series data is assumed to be
+\begin{equation}
+    X^{(0)}=\{X^{(0)}(1),X^{(0)}(2),X^{(0)}(3),...,X^{0}(n)\}
+\end{equation}
+where n represents the total number of time-series data.
+
+    Use an accumulated generation operation(AGO) on the sequence to get a new squence
+\begin{equation}
+  X^{(1)}(k) = \sum^k_{i=1}X^{(0)}(i),\quad k=1,2,...,n
+\end{equation}
+
+Therefore, the new squence is
+\begin{equation}
+  X^{(1)}=\{X^{(1)}(1),X^{(1)}(2),X^{(1)}(3),...,X^{1}(n)
+\end{equation}
+
+The grey differential equation is ued to develop the GM(1,1) model
+\begin{equation}
+  X^{(0)}(k) + ay^{(1)}(k)=u
+\end{equation}
+where $a$ is the development coefficient; $y^{(0)}$ represents the 
+mean generation with consecutive neighbors sequence of $X^{(1)}$ and its define as,
+\begin{equation}
+  y^{(1)}(k) = \frac12\times\left[y^{(1)}(k) + y^{(1)}(k-1)\right],\quad k=1,2,...,n
+\end{equation}
+
+Use the ordinary least squares method, first-order AGO sequence can be obtained as,
+\begin{equation}
+  X^{(1)}(k)=\left(X^{(0)}(1)-\frac{\hat{u}}{\hat{a}}\right)\times e^{-\hat{a}(k-1)}+\frac{\hat{u}}{\hat{a}}
+\end{equation}
+where $\left[\hat{a},\hat{u}\right]^T$ is equal to $\left(C^TC\right)^{-1}C^TX$
+and
+\begin{equation}
+C=\begin{bmatrix}-y^{(1)}(2)&1\\-y^{(1)}(3)&1\\...&...\\-y^{(1)}(n)&1\end{bmatrix}
+\end{equation}
+and
+\begin{equation}
+  X = \left[X^{(0)}(2),X^{(0)}(2),...,X^{(0)}(n)\right]^T
+\end{equation}
+
+According to the prediction model above, 
+
+\section{Target and Plan}
+\subsection{Target}
+
+Based on our forecast results in Sub-Model.\Rmnum{2}, we find that  the energy distribution is not balanced between states,  
+while Arizona and California consume far more energy than production, New Mexico and Texas produce far more energy than they consume.
+Therefore, we consider that if four states can achieve energy complementarity, such as energy-rich states send energy to less energy-intensive states, and the energy distribution of the four states will be relatively balanced.
+At the same time, the state with large energy consumption will be paid to the energy export state, which will bring economic benefits to the energy-rich states and improve the overall economic benefits.
+This not only improves the utilization of resources, but also brings the average economic benefit.
+So our overall goal is to make the energy status of the four states more balanced and the economic benefits to be relatively optimal.
+
+Based on this idea, we propose the following optimization model.Our optimization variable is set as energy transfer between states,such as $T_e(i,i)$, $T_s(i,j)$, where i represents a state.
+We set the goal of optimizing the proportion of renewable energy used in each of the four states as equal as possible, that is, the least variance in the use of renewable energy in the four states.
+\begin{equation}
+  Min{\left({\sigma}^2\left(\frac{E_c(i)}{S_c(i)}\right)\right)}
+\end{equation}
+
+
+We set the state of energy transmission is 0, the same two states transfer each other the opposite number, so we set the transport constraints
+\begin{align}
+  T_e(i,i) &= 0 \\
+  T_e(i,j) &= -T_e(j,i) \\
+  T_S(i,i) &= 0 \\
+  T_s(i,j) &= -T_s(j,i)
+\end{align}
+
+At the same time, according to our forecasts, the total renewable energy produced by the four states is greater than the total renewable energy consumption of the four states, but the total energy consumption is slightly larger than that of production and needs to be imported from other places. Energy constraints are:
+\begin{align}
+  E_p(i) > E_c(i) \\
+  S_p(i) > S_c(i) \\
+  \sum\limits_{i}S_c(i) < \sum\limits_{i}S_p(i) 
+\end{align}
+\subsection{Plan}
+
+In response to the objective and the results of our model solution, and for short-term goals and long-term goals, the following four measures were proposed.
+
+Short-term measures until 2025:
+\begin{itemize}
+  \item Texas and New Mexico transfer excess renewable energy to Arizona and California.
+  \item Increase the transmission of renewable energy and reduce the transmission of non-renewable energy such as fossil fuels.
+\end{itemize}
+Long-term measures until 2050:
+\begin{itemize}
+  \item The states continue to vigorously develop renewable energy based on the current energy situation.
+  \item The states can approprately expand the number of cooperating states in order to achieve better project. 
+\end{itemize}
+
+\section{The Analysis of Result}
+For the prediction problem of D, the predicted results in 2025 and 2050 are shown in the following figure. For the overall energy assessment, we can see the rankings for 2025 and 2050:
+\begin{table}[H]
+\centering
+\caption{Overall energy ranking forecast for each state}
+\label{oerf}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+   &   AZ & CA & NM & TX   \\ \hline
+2025 & 4  & 3  & 1  & 2 \\ \hline
+2050 & 4  & 2  & 1  & 3 \\ \hline
+\end{tabular}
+\end{table}
+
+For the difference in consumption, based on the data provided, we select the four renewable energy sources of coal, oil, natural gas and renewable energy which's data is well-established.
+We can see the projections for each state's energy sources in 2025 and 2050:
+\begin{table}
+  \centering
+  \caption{Energy difference forecast for each state}
+  \label{Energy difference forecast for each state}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}*{ }&2025&2050 \\
+    \cline{2-3}
+    &Billion Btu &Billion Btu\\
+    \hline
+    % &Billion Btu&Billion Btu&Billion Btu&Billion Btu
+  \end{{tabular}
+\end{table}
+
+To verify the accuracy of the model, we conducted an error analysis.
+Since the forecast results in 2025 and 2050 are difficult to measure, we select 8 data from 2009 of CA as the forecast data for error analysis. The results are as follows:
+
+\begin{table}[H]
+  \centering
+  \caption{Prediction error}
+  \label{Prediction error }
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  Year & Category & Predicted & Real    & Arror  \\ \hline
+  2015 & PAPRB    & 1423914   & 1162146 & 261768 \\ \hline
+  2015 & NGMPB    & 317633    & 320143  & -2510  \\ \hline
+  2015 & NNTCB    & 2589047   & 2325411 & 263636 \\ \hline
+  2015 & FFTCB    & 6457156   & 5741400 & 715756 \\ \hline
+  2015 & TETCB    & 8697189   & 7750230 & 946959 \\ \hline
+  2015 & PATCB    & 3865984   & 3488104 & 377880 \\ \hline
+  2015 & HYTCB    & 328375    & 326152  & 2223   \\ \hline
+  2015 & WWTCB    & 154249    & 149173  & 5076   \\ \hline
+  \end{tabular}
+  \end{table}
+
+ We can see that the result is not very satisfactory. However, given the conditions of the problem is under no other macro factors influence forecast. And actual results may be affected by the policy factors and so on, so the model just meets the requirements.
+
+
+\section{The Evaluation of Model}
+
+we will discuss the gray prediction model in this section.
+\subsection{Strengths}
+\begin{itemize}
+  \item The model is simple and easy to implement.
+  \item The model is calculated using a professional mathematical analysis software, a higher degree of feasibility.
+  \item The indicators set up take into account a number of factors and are highly integrated.
+\end{itemize}
+\subsection{Weaknesses}
+\begin{itemize}
+  \item The prediction model is too simple to predict well.
+  \item For this problem, there are more external data introduced, and fewer things are created by ourself.
+  \item Not devoting too much time to modify the part of the model, and the center is not prominent enough.
+\end{itemize}
+\subsection{Improvements}
+\begin{itemize}
+  \item For 2009's and previous data, we can combine them with the government policies, the economic crisis and new energy technology breakthroughs to analyze and find the causes of the energy fluctuations in the time series curve, thus making the curve smoother.
+  \item For the goal optimization problem, we can consider the transmission costs between states and make the model closer to the actual situation.
+\end{itemize}
 
 \newpage
 \setcounter{page}{2}
