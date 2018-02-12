@@ -23,26 +23,36 @@
 \title{}
 \begin{document}
 \begin{abstract}
-abstract
+
+  Energy is of great importance to a country. The United States, as a federal country, has its own energy policies for each state. With the development of society and technology, the energy demand and use of each state can be contradictory. And state-to-state collaboration can make up for the shortcomings of each state, capitalize on the strengths of each state, and optimize the energy mix to maximize the use of energy.
+  So, how to collaborate has a crucial impact on whether it can produce the greatest benefits.
+
+  For these four states, first we analyze the current status and evolution of energy production and use in each state. We describe each state of energy by setting energy status indicators and try to find the best situation. Then we predict the future energy status of the states via prediction models. Combining the optimal standards and predictions, we establish the optimal target model to optimize the energy indicators. Finally, we put forward corresponding measures to achieve our optimal goal.
+
+  For question A of part one, we describe the state's energy situation by plotting the time sequence diagram of state energy, and the pie chart of various energy sources in production, consumption, and expenditure in 2009. For question B, we take into account the overall situation of energy, climate and environment in each state, and economic development in eachstate. We establish an energy status indicator to describe historical energy status in each state and make the result clearer through detailed analysis of each state. For problem C, we select 30 kinds of data that can properly describe the situation of renewable energy. And we add ten kinds of external indicators that may be related to renewable energy. Then, we conduct gray relational analysis and finally select eight indicators out of 40. Finally, the Topsis method is used to select the state with the best clean energy status in four states, which is Texas. For problem D, we set up a grey forecasting model to predict in both 2025 and 2050 for short and long term measures.
+
+  For problem A of part two, we set up the optimal goal analysis model based on the best criteria and predictions from part one. The model allows four states to achieve the maximum benefit overall, using the results as the goal of an energy agreement. For question B, we put forward a total of four suggestions for short term in 2025 and long term in 2050 to achieve the goals.
+
+  Our final model can basically meet our requirements, but due to the predicted year being too far, the actual outcome is not very satisfactory. After some modification, it can be used in some countries' internal energy protocol.    
 \begin{keywords}
-keyword1; keyword2
+Energy distribution; Renewable Energy
 \end{keywords}
 \end{abstract}
 \maketitle
 
 \newpage
-\pagestyle{fancy} 
-\rhead{\small\sffamily}
+% \pagestyle{fancy} 
+% \rhead{\small\sffamily}
 Governors, there is no doubt that energy agreements between the states are important to achieve energy complementarity.
 
-First, we analyzed the history of energy in each of your states.  There are similar places in your states from 1960 to 2009. In the same place, the demand for energy has been increasing since the 1960s, with the continuous growth of the economy and the improvement of various industrial structures. Your states nearly consumes a large proportion of fossil energy, but it's very glad to see that from the beginning of this century to the recent years you've all developed renewable energy. This increases the proportion of renewable energy consumption to total energy consumption. 
+First, we analyzed the history of energy in each of your states. There are similar places in your states from 1960 to 2009. In the same place, the demand for energy has been increasing since the 1960s, with the continuous growth of the economy and the improvement of various industrial structures. Your states nearly consumes a large proportion of fossil energy, but it's very glad to see that from the beginning of this century to the recent years you've all developed renewable energy. This increases the proportion of renewable energy consumption to total energy consumption. 
 The difference is that due to the geographical environment, climate and other factors, the development of renewable energy in each state is different. California is good at geothermal energy development, while New Mexico and Texas develop wind energy better, while Arizona is better at developing solar and fuel ethanol.
 
 We has made the forecast for the energy usage in each state, and we concluded that without any new policy, there will be problems in the energy status of your states.
 Specifically with the development of cities, your demand for energy will be greatly improved. According to the current state of new energy development in each state, Arizona and California may face the problem of energy shortage, the energy required will be almost dependent on imported energy sources. While New Mexico and Texas will have energy surplus situation.
 Here we exaggerate the energy storage of fossil fuels, and your need for energy will be more urgent if the fossil energy is exhausted.
 
-Based on our forecasts and analysis, we will advise you on the goals of energy contracts. First of all, you should try your best to realize the comprehensive development of the energy contract. This requires you to realize the complementary resources inside the four states, to achieve maximum economic benefits. Specifically, Texas and New Mexico transfer excess renewable energy to Arizona and California.
+Based on our forecasts and analysis, we will advise you on the goals of energy contracts. First of all, you should try your best to realize the comprehensive development of the energy contract. This requires you to realize the complementary resources inside four states, to achieve maximum economic benefits. Specifically, Texas and New Mexico transfer excess renewable energy to Arizona and California.
 It is necessary to increase the transmission of renewable energy and reduce the transmission of non-renewable energy such as fossil fuels, which will make your energy structure more optimized.
 Every state should continue to vigorously develop renewable energy on the basis of the current energy situation, because it is not only an economic benefit, but also a huge impact on the environment. In addition, you can expand the number of cooperative states appropriately, which will contribute to better development.
 
@@ -50,20 +60,20 @@ Thank you for taking the time to read this note and your tireless work.
 \newpage
 \tableofcontents
 % \thispagestyle{}% 当前页不显示页码'
-\pagestyle{fancy} 
-\rhead{\small\sffamily}
+% \pagestyle{fancy} 
+% \rhead{\small\sffamily}
 \newpage
-\rhead{\small\sffamily Page \thepage\ of \pageref{LastPage}}
-\setcounter{page}{1}
+% \rhead{\small\sffamily Page \thepage\ of \pageref{LastPage}}
+% \setcounter{page}{1}
 
 \section{Introduction}
 \subsection{Statement of the problem}
 Energy production and energy consumption, which can be regarded as an important economic index, not only reflect the industrial development of a country but also relate to the lifehood of a country. But on the other hand, with the continuous advancement and deepening of the industrialization of human civilization, the consumption of non-renewable energy sources such as coal, petroleum is also accelerating. Hence, the development of cleaner renewable energy is particularly important. After all, if humans depend too much on non-renewable energy sources, the day when fossil fuels are depleted is also a day for humankind to return to agrarian society.
 
-As the world's superpower, the US is a big country of energy. Many of America's energy policy decentralizes to the state level. to ensure cooperative action between the states\cite{InterstateCompact}, many compacts are formed between states. In this context, along the border with Mexico four states, California, Arizona, new Mexico, Texas hope to form a new energy compact focused on more and more widely used, cleaner renewable energy sources.
+As the world's superpower, the US is a big country of energy. Many of America's energy policy decentralizes to the state level. To ensure cooperative action between the states\cite{InterstateCompact}, many compacts are formed between states. In this context, along the border with Mexico four states, California, Arizona, new Mexico, Texas hope to form a new energy compact focusing on more and more widely used, cleaner renewable energy sources.
 \begin{itemize}
-  \item Create an energy profile for each of the four states.
-  \item Make governors easier to understand the four states'usage of cleaner, renewable energy sources  and the similarities and difference between the four states.
+  \item Create an energy profile for each of four states.
+  \item Make governors easier to understand four states'usage of cleaner, renewable energy sources  and the similarities and difference between four states.
   \item Determine a state that is appeared to have the ``best" profile for use of cleaner, renewable energy in 2009.
   \item Predict the energy profile of each state in 2025 and 2050.
   \item Determine renewable energy usage targets for 2025 and 2050 which are also for the new four-state energy compact.
@@ -71,7 +81,7 @@ As the world's superpower, the US is a big country of energy. Many of America's 
 \end{itemize}
 
 \subsection{Overview of Our Work}
-For these issues, we plot the time series and pie charts to show the status and evolution of energy production and use in each state. We set out the state of energy of the state by setting the index of the state of energy, formulate the corresponding score standard to find the best situation at this moment, and then predict the state of the future energy of each state through the gray prediction model. Combining with the optimal standard and the forecasting result, Optimal goal model to make the state of the state of energy to achieve the best overall. Finally, we put forward our measures for long-term and short-term goals.
+For these issues, we plot the time series and pie charts to show the status and evolution of energy production and use in each state. We set out the state of energy of the state by setting the index of the state of energy, formulate the corresponding score standard to find the best situation at this moment, and then predict the future energy of each state through the gray prediction model. Combining the optimal standard and the forecasting result, We set the optimal goal model to make the status of the state's energy as a whole to achieve the best Finally, we put forward our measures for long-term and short-term goals.
 
 \section{Notations and Assumptions}
 \subsection{Notations}
@@ -107,13 +117,13 @@ For these issues, we plot the time series and pie charts to show the status and 
   \item Assume that the storage of fossil energy can meet the current trend of fossil energy production.
   \item Assume that various energy price fluctuations will not change too much.
   \item Assume that there will be no loss in energy transfer in the current four states.
-  \item Assume that the current energy transfer costs are the same between the four states.
+  \item Assume that the current energy transfer costs are the same between four states.
 \end{itemize}
 \section{Energy Profile}
 \subsection{Overview}
-We make an energy profile for the four states from 1960 to 2009 in the past 50 years, which covers four aspects of energy consumption, energy prices, energy expenditures, energy production.As shown in the following figures.
+We make an energy profile for four states from 1960 to 2009 in the past 50 years, which covers four aspects of energy consumption, energy prices, energy expenditures, energy production.As shown in the following figures.
 
-(Note that the following figures labels are five-character series names.The first two letters  represent state code. According to the guide \cite{pr_guide}, \cite{use_guide}, \cite{product}, the third and fourth letters like 'TC' means total consumption and 'PR' means product; the fifth letter represents the type of data such as 'B' means consumption in British thermal units (Btu), 'D' means price in dollars per million Btu and 'V' means expenditure in million dollars.Furthemore, the curve represents the change in energy over time.) 
+(Note that the following Line diagrams labels are five-character series names.The first two letters  represent state code. According to the guide \cite{pr_guide}, \cite{use_guide}, \cite{product}, the third and fourth letters like 'TC' means total consumption and 'PR' means product; the fifth letter represents the type of data such as 'B' means consumption in British thermal units (Btu), 'D' means price in dollars per million Btu and 'V' means expenditure in million dollars.Furthemore, the curve represents the change in energy over time.The following pie charts are similar with line diagrams except that '2009' means the year of 2009) 
 
 \subsection{Each State}
 \subsubsection{Arizona}
@@ -133,13 +143,13 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 \begin{figure}[H]
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{AZTCD.png}
-\caption{AZTCD} \label{fig:AZTCD}
+\includegraphics[width=3in]{AZPRB09.png}
+\caption{AZPRB2009} \label{fig:AZPRB2009}
 \end{minipage}
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{AZTCV.png}
-\caption{AZTCV} \label{fig:AZTCV}
+\includegraphics[width=3in]{AZTCB09.png}
+\caption{AZTCB2009} \label{fig:AZTCB2009}
 \end{minipage}
 \end{figure}
 
@@ -161,13 +171,13 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 \begin{figure}[H]
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{CATCD.png}
-\caption{CATCD} \label{fig:CATCD}
+\includegraphics[width=3in]{CAPRB09.png}
+\caption{CAPRB2009} \label{fig:CAPRB2009}
 \end{minipage}
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{CATCV.png}
-\caption{CATCV} \label{fig:CATCV}
+\includegraphics[width=3in]{CATCB09.png}
+\caption{CATCB2009} \label{fig:CATCB2009}
 \end{minipage}
 \end{figure}
 
@@ -188,13 +198,13 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 \begin{figure}[H]
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3.in]{NMTCD.png}
-\caption{NMTCD} \label{fig:NMTCD}
+\includegraphics[width=3.in]{NMPRB09.png}
+\caption{NMPRB2009} \label{fig:NMPRB2009}
 \end{minipage}
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{NMTCV.png}
-\caption{NMTCV} \label{fig:NMTCV}
+\includegraphics[width=3in]{NMTCB09.png}
+\caption{NMTCB2009} \label{fig:NMTCB2009}
 \end{minipage}
 \end{figure}
 
@@ -215,13 +225,13 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 \begin{figure}[H]
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{TXTCD.png}
-\caption{TXTCD} \label{fig:TXTCD}
+\includegraphics[width=3in]{TXPRB09.png}
+\caption{TXPRB2009} \label{fig:TXPRB2009}
 \end{minipage}
 \begin{minipage}[htb]{0.5\textwidth}
 \centering
-\includegraphics[width=3in]{TXTCV.png}
-\caption{TXTCV} \label{fig:TXTCV}
+\includegraphics[width=3in]{TXTCB09.png}
+\caption{TXTCB2009} \label{fig:TXTCB2009}
 \end{minipage}
 \end{figure}
 
@@ -229,7 +239,7 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 
 \section{Sub-Model.\Rmnum{1} :\quad 3E Evaluation Model}
 \subsection{Result and Analysis}
-To describe the energy situation of the four states, first, we need to define an indicator that describes the overall condition of energy.Energy is closely related to the economy and the environment. therefore, the impact of economic and environment can not be ignored as we consider the condition of energy.
+To describe the energy situation of four states, first, we need to define an indicator that describes the overall condition of energy. Energy is closely related to the economy and the environment. therefore, the impact of economic and environment can not be ignored as we consider the condition of energy.
 
 So we study the paper \cite{zhaotao2008energy} and take it into consideration. For energy, we use total energy consumption and clean energy consumption as a proportion of total energy consumption; For economy, we use the GDP of each state and real GDP per capita of each state; For the environment, we use carbon dioxide emissions and temperature data. Finally, these data are integrated to represent our indicators of clean energy.
 For the weight of the two kinds of data in all aspects, we use the method of principal component analysis and analytic hierarchy process to determine synthetically. This process can not only express the subjective will of policy makers, but also avoid the deviation of subjective wishes and the actual situation. In addtion, the original data can be fully utilized.Based on experience, we assume that subjective weights and objective weights are equally important, then the weight of each  indicator is
@@ -271,7 +281,7 @@ After then, we make a statistical analysis of the energy status indicators of ea
 
 As we can see, the beginning of the rapid economic growth leads to the indicator increasing. However, due to the impact of carbon dioxide emissions on  environmental factors, the indicators of all states began to decrease around 1987. Then, with the concept of sustainable development strengthened, each state proposed its own new energy policy and the indicator began to increase. As we can see in Texas and New Mexico, because of their energetic efforts to develop new energy sources, their indicators were increasing at a relatively faster rate.
 
-Moreover, since there is a large amount of data in each state that affects the similarities and differences between the states, we analyze the renewable energy condition in each of the four states by making time series diagram of different states.
+Moreover, since there is a large amount of data in each state that affects the similarities and differences between the states, we analyze the renewable energy condition in each of four states by making time series diagram of different states.
 
 We plot the development trends of various renewable energy categories in Arizona over the past 50 years in figure.\ref{fig: Arizona renewable energy time series}.
 \begin{figure}[htb]
@@ -280,12 +290,12 @@ We plot the development trends of various renewable energy categories in Arizona
   \caption{Arizona renewable energy time series} \label{fig: Arizona renewable energy time series}
 \end{figure}
 
-As we can see, hydropower in Arizona is growing earlier and occupies a significant proportion of all renewable energy sources, followed by wood and waste products. Other renewable energy sources began to develop in the 1980s and 1990s. It is is notable that fuel ethanol and solar power are developing rapidly. By 2009, fuel ethanol consumption exceeded that of wood and waste, making it the second largest consumption of renewable energy.
+As we can see, hydropower in Arizona is growing earlier and occupies a significant proportion of all renewable energy sources, followed by wood and waste products. Other renewable energy sources began to develop in the 1980s and 1990s. It is notable that fuel ethanol and solar power are developing rapidly. By 2009, fuel ethanol consumption exceeded that of wood and waste, making it the second largest consumption of renewable energy.
 
 An analysis of Arizona's geography and climate shows that Arizona has abundant solar energy resources, averaging 300 sunny days a year. However, due to the long-term high cost of photovoltaic energy, the growth rate has gradually slowed down after the initial rapid growth. The current cost of photovoltaic energy is estimated at 0.15-0.25 dollars / kWh, so the development is not satisfactory.\cite{AZretime}
 Although the wind energy in Arizona is developing slowly, its development prospects are good. Located near the eastern edge of Mogollon Rim, eastern Arizona and eastern Arizona are geographically superior and resource-rich. There are also good wind resources on the edges and ridges across the state.\cite{AZwind}
 
-We plot the development trends of various renewable energy categories in California over the past 50 years in figure.\ref{California renewable energy time series}.
+We plot the development trends of various renewable energy categories in California over the past 50 years in figure.\ref{fig: California renewable energy time series}.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=12cm]{nmre.png}
@@ -346,15 +356,15 @@ Here $ x_i '(k) $ indicates the comparison sequence just screened. $ x_i (k) $ i
 
 After that, the gray correlation coefficient $r_i(k)$ between the reference sequence and the comparison sequence can be calculated.
 The so-called correlation coefficient, is substantially between degree of difference curve geometry. Therefore, the size of the difference between the curves can be used as a measure of the degree of association
-For a reference sequence $ x_0 $, there are several comparison sequences $ x_1, x_2, \ cdots, x_m $. The correlation coefficient $ r_i (k) $ of each comparison sequence and the reference sequence at each moment (ie, points in the curve) can be calculated by following formula: Where $\rho$ is the resolution coefficient, generally between 0 to 1, usually take 0.5.
+For a reference sequence $ x_0 $, there are several comparison sequences $ x_1, x_2, \cdots, x_m $. The correlation coefficient $ r_i (k) $ of each comparison sequence and the reference sequence at each moment (ie, points in the curve) can be calculated by following formula: Where $\rho$ is the resolution coefficient, generally between 0 to 1, usually take 0.5.
 \begin{equation}
   r_i(k) = \frac{\min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|}{|x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|},\quad k=1,2,\cdots,n
   \label{eq: rik}
 \end{equation}
-In Eq.\ref{eq: rik}, $ \ min \ limits_ {i} \ min \ limits_ {k} | x_0 (k) - x_i (k) |, max \ limits_ {i} \ max \ limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
+In Eq.\ref{eq: rik}, $ \min\limits_ {i} \min\limits_ {k} | x_0 (k) - x_i (k) |, max \limits_ {i} \max \limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
 
-In the formula, $ \ min \ limits_ {i} \ min \ limits_ {k} | x_0 (k) - x_i (k) |, max \ limits_ {i} \ max \ limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
-Where $ \ rho $ is the resolution coefficient, which is usually taken as (0, 1). The smaller the $ \ rho $, the greater the difference between the correlation coefficients and the stronger the ability to distinguish. Usually take 0.5.
+In the formula, $ \min\limits_ {i} \min\limits_ {k} | x_0 (k) - x_i (k) |, max \limits_ {i} \max \llimits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
+Where $ \rho $ is the resolution coefficient, which is usually taken as (0, 1). The smaller the $ \rho $, the greater the difference between the correlation coefficients and the stronger the ability to distinguish. Usually take 0.5.
 
 The correlation coefficients defined in the formula describe an indicator of the correlation degree between the comparison sequence and the reference sequence at a certain time. Since there is an association number at each moment, the information is more scattered and it is not convenient to compare. Therefore, we give the formula to calculate the correlation between the comparison sequence and the reference sequence:
 \begin{equation}
@@ -365,9 +375,9 @@ According to Eq.\ref{ri} to calculate the relevance of each comparison series an
 
 We select the same relevant indicators for each state here.
 First of all, we select five indicators that appear in all the states, and then assign the weights of the ten main influence indicators in each state, and sort them according to their relevance to the comprehensive evaluation indicators. We pick the largest of the three indicators other than the five mentioned above. So in the end we decide to adopt the following eight indicators:
-PAPRB  NAMPB  NNTCB  FFTCB  TETCB  PATCB  HTCB  WWTCB
+PAPRB,NAMPB,  NNTCB,  FFTCB , TETCB,  PATCB,  HYTCB,  WWTCB.
 \subsection{Use Topsis to Evaluate}
-Then we evaluated the indicators of the four states using the Topsis method, which is based on the principle\cite{wikitopsis}.
+Then we evaluated the indicators of four states using the Topsis method, which is based on the principle\cite{wikitopsis}.
 
 There are n evaluation objects, m evaluation indicators. The original data can be written as a matrix:
 \begin{equation}
@@ -426,8 +436,8 @@ In terms of forecasting energy profile in 2025 and 2050,  we mainly consider ove
 where PR is energy production and PC is energy consumption. This value represents the level of the state's surplus of energy, the value greater than zero indicates that the state's energy production value is greater than the consumption value, which means the state can export energy to other states. Value less than zero indicates that the state energy consumption is greater than the production, which means the state need to import energy from other states.
 
 For the prediction model, we use the gray prediction model.
-\subsection{GM(1,1)}
-We use the GM(1,1) model to forecast time-series. GM(1,1) is one of the models of gray theory, which has been 
+
+GM(1,1) is one of the models of gray theory, which has been 
 utilized in many areas such as the power industry\cite{}.The process of developing the model is shown below.
     
 The sequence of time-series data is assumed to be
@@ -443,7 +453,7 @@ where n represents the total number of time-series data.
 
 Therefore, the new squence is
 \begin{equation}
-  X^{(1)}=\{X^{(1)}(1),X^{(1)}(2),X^{(1)}(3),...,X^{1}(n)
+  X^{(1)}=\{X^{(1)}(1),X^{(1)}(2),X^{(1)}(3),...,X^{1}(n)\}
 \end{equation}
 
 The grey differential equation is ued to develop the GM(1,1) model
@@ -467,23 +477,22 @@ C=\begin{bmatrix}-y^{(1)}(2)&1\\-y^{(1)}(3)&1\\...&...\\-y^{(1)}(n)&1\end{bmatri
 \end{equation}
 and
 \begin{equation}
-  X = \left[X^{(0)}(2),X^{(0)}(2),...,X^{(0)}(n)\right]^T
+  X = \left[X^{(0)}(2),X^{(0)}(3),...,X^{(0)}(n)\right]^T
 \end{equation}
 
-According to the prediction model above, 
 
 \section{Target and Plan}
 \subsection{Target}
 
 Based on our forecast results in Sub-Model.\Rmnum{2}, we find that  the energy distribution is not balanced between states,  
 while Arizona and California consume far more energy than production, New Mexico and Texas produce far more energy than they consume.
-Therefore, we consider that if four states can achieve energy complementarity, such as energy-rich states send energy to less energy-intensive states, and the energy distribution of the four states will be relatively balanced.
+Therefore, we consider that if four states can achieve energy complementarity, such as energy-rich states send energy to less energy-intensive states, and the energy distribution of four states will be relatively balanced.
 At the same time, the state with large energy consumption will be paid to the energy export state, which will bring economic benefits to the energy-rich states and improve the overall economic benefits.
 This not only improves the utilization of resources, but also brings the average economic benefit.
-So our overall goal is to make the energy status of the four states more balanced and the economic benefits to be relatively optimal.
+So our overall goal is to make the energy status of four states more balanced and the economic benefits to be relatively optimal.
 
 Based on this idea, we propose the following optimization model.Our optimization variable is set as energy transfer between states,such as $T_e(i,i)$, $T_s(i,j)$, where i represents a state.
-We set the goal of optimizing the proportion of renewable energy used in each of the four states as equal as possible, that is, the least variance in the use of renewable energy in the four states.
+We set the goal of optimizing the proportion of renewable energy used in each of four states as equal as possible, that is, the least variance in the use of renewable energy in four states.
 \begin{equation}
   Min{\left({\sigma}^2\left(\frac{E_c(i)}{S_c(i)}\right)\right)}
 \end{equation}
@@ -493,11 +502,11 @@ We set the state of energy transmission is 0, the same two states transfer each 
 \begin{align}
   T_e(i,i) &= 0 \\
   T_e(i,j) &= -T_e(j,i) \\
-  T_S(i,i) &= 0 \\
+  T_S(i,j) &= 0 \\
   T_s(i,j) &= -T_s(j,i)
 \end{align}
 
-At the same time, according to our forecasts, the total renewable energy produced by the four states is greater than the total renewable energy consumption of the four states, but the total energy consumption is slightly larger than that of production and needs to be imported from other places. Energy constraints are:
+At the same time, according to our forecasts, the total renewable energy produced by four states is greater than the total renewable energy consumption of four states, but the total energy consumption is slightly larger than that of production and needs to be imported from other places. Energy constraints are:
 \begin{align}
   E_p(i) > E_c(i) \\
   S_p(i) > S_c(i) \\
@@ -538,14 +547,10 @@ We can see the projections for each state's energy sources in 2025 and 2050:
   \centering
   \caption{Energy difference forecast for each state}
   \label{Energy difference forecast for each state}
-  \begin{tabular}{|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c}
     \hline
-    \multirow{2}*{ }&2025&2050 \\
-    \cline{2-3}
-    &Billion Btu &Billion Btu\\
-    \hline
-    % &Billion Btu&Billion Btu&Billion Btu&Billion Btu
-  \end{{tabular}
+    % \multirow{2}*{3}&
+  \end{tabular}
 \end{table}
 
 To verify the accuracy of the model, we conducted an error analysis.
@@ -571,7 +576,47 @@ Since the forecast results in 2025 and 2050 are difficult to measure, we select 
 
  We can see that the result is not very satisfactory. However, given the conditions of the problem is under no other macro factors influence forecast. And actual results may be affected by the policy factors and so on, so the model just meets the requirements.
 
+ For the optimal target problem of part2 A, we directly call the linear programming function of MATLAB, and obtain the optimal strategy for renewable energy transmission.
 
+\begin{table}[]
+\centering
+\caption{
+  The optimal transmission of renewable energy between states(Btu)}
+\label{
+  The optimal transmission of renewable energy between states(Btu)}
+\begin{tabular}{|c|c|c|}
+\hline
+       &   2025    &    2050       \\ \hline
+$T_e$\{TX,AZ\} & 15167666 & 114063568 \\ \hline
+$T_e$\{TX,CA\} & 14526330 & 137682997 \\ \hline
+$T_e$\{TX,NM\} & 10359144 & 99196691  \\ \hline
+$T_e$\{NM,AZ\} & 0        & 0         \\ \hline
+$T_e$\{NM,CA\} & 0        & 0         \\ \hline
+$T_e$\{CA,AZ\} & 0        & 0         \\ \hline
+\end{tabular}
+\end{table}
+
+The optimal strategy for total energy transmission is
+\begin{table}[]
+  \centering
+  \caption{
+    The optimal transmission of renewable energy between states(Btu)}
+  \label{
+    The optimal transmission of total  energy between states(Btu)}
+  \begin{tabular}{|c|c|c|}
+  \hline
+         &   2025    &    2050       \\ \hline
+  $T_e$\{TX,AZ\} & 19318119 & 15299026 \\ \hline
+  $T_e$\{TX,CA\} & 18380957 & 129736402 \\ \hline
+  $T_e$\{TX,NM\} & 4384840 & 80115845  \\ \hline
+  $T_e$\{NM,AZ\} & 0        & 0         \\ \hline
+  $T_e$\{NM,CA\} & 0        & 0         \\ \hline
+  $T_e$\{CA,AZ\} & 0        & 0         \\ \hline
+  \end{tabular}
+  \end{table}
+
+From the two tables above, we can see that the transmission strategy has a relatively simple goal. The main reason is that Texas transmits energy to the other three states. The reason for this may be that the prediction model is poor, or it may be because there is no Considering the transmission costs among the states, resulting in fewer constraints.
+  
 \section{The Evaluation of Model}
 
 we will discuss the gray prediction model in this section.
@@ -594,9 +639,9 @@ we will discuss the gray prediction model in this section.
 \end{itemize}
 
 \newpage
-\setcounter{page}{2}
-\pagestyle{fancy} 
-\rhead{\small\sffamily  \rmnum{\thepage}}
+% \setcounter{page}{2}
+% \pagestyle{fancy} 
+% \rhead{\small\sffamily  \rmnum{\thepage}}
 
 \bibliographystyle{siam}
 \bibliography{ref}
@@ -604,6 +649,10 @@ we will discuss the gray prediction model in this section.
 
 \begin{appendices}
 
+
+\section{CO2 Data}
+
+We get the data from \cite{CO2}, the CO2 data of four states from 1980 to 2015 are shown below.
 
 \begin{minipage}{\textwidth}
   \begin{minipage}[t]{0.45\textwidth}
@@ -786,37 +835,6 @@ we will discuss the gray prediction model in this section.
           \end{tabular}
     \end{minipage}
  \end{minipage}
-
-
-
-
-\begin{proof}   %插入证明
-  x
-\end{proof}
-
-\newtheorem{lemma}{Lemma}%只需在第一个引理开始之前出现一次  
-\begin{lemma}  
-If $f\in C_{L}^{1,1}(\mathbb{R}^{n})$, then $\forall \textbf{x},\textbf{y}\in\mathbb{R}^{n}$ we have  
-\begin{equation}  
-\left|{f(\textbf{y})-f(\textbf{x})-\nabla f(\textbf{x})^{T}(\textbf{y}-\textbf{x})}\right|\le\frac{L}{2}\left\|{\textbf{y}-\textbf{x}}\right\|^{2}.  
-%\label{eq:eq5}  
-\end{equation}  
-%\label{lem:lem1}  
-\end{lemma} 
-\section{First appendix}
-
-\lipsum[13]
-
-% 代码插入
-Here are simulation programmes we used in our model as follow.\\
-
-\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
-\lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
-
-\section{Second appendix}
-
-some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
-\lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
 
 \end{appendices}
 \end{document}
