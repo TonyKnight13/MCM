@@ -87,13 +87,11 @@ As the world's superpower, the US is a big country of energy. Many of America's 
 
 \subsection{Assumptions}
 
-\section{Data Processing}
-
 \section{Energy Profile}
 \subsection{Overview}
 We make an energy profile for the four states from 1960 to 2009 in the past 50 years, which covers four aspects of energy consumption, energy prices, energy expenditures, energy production.As shown in the following figures.
 
-(Note that the following figures labels are five-character series names.The first two letters  represent state code. According to the guide \cite{pr_guide},\cite{use_guide} and \cite{product}, the third and fourth letters like 'TC' means total consumption and 'PR' means product; the fifth letter represents the type of data such as 'B' means consumption in British thermal units (Btu), 'D' means price in dollars per million Btu and 'V' means expenditure in million dollars.Furthemore, the curve represents the change in energy over time.) 
+(Note that the following figures labels are five-character series names.The first two letters  represent state code. According to the guide \cite{pr_guide}, \cite{use_guide}, \cite{product}, the third and fourth letters like 'TC' means total consumption and 'PR' means product; the fifth letter represents the type of data such as 'B' means consumption in British thermal units (Btu), 'D' means price in dollars per million Btu and 'V' means expenditure in million dollars.Furthemore, the curve represents the change in energy over time.) 
 
 \subsection{Each State}
 \subsubsection{Arizona}
@@ -206,11 +204,12 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 \end{figure}
 
 
-\section{Model}
-\subsection{3E evaluation model}
+
+\section{Sub-Model.\Rmnum{1}:3E Evaluation Model}
+\subsection{Result and Analysis}
 To describe the energy situation of the four states, first, we need to define an indicator that describes the overall condition of energy.Energy is closely related to the economy and the environment. therefore, the impact of economic and environment can not be ignored as we consider the condition of energy.
 
-So we study the paper \cite{} and take it into consideration. For energy, we use total energy consumption and clean energy consumption as a proportion of total energy consumption; For economy, we use the GDP of each state and real GDP per capita of each state; For the environment, we use carbon dioxide emissions and temperature data. Finally, these data are integrated to represent our indicators of clean energy.
+So we study the paper \cite{zhaotao2008energy} and take it into consideration. For energy, we use total energy consumption and clean energy consumption as a proportion of total energy consumption; For economy, we use the GDP of each state and real GDP per capita of each state; For the environment, we use carbon dioxide emissions and temperature data. Finally, these data are integrated to represent our indicators of clean energy.
 For the weight of the two kinds of data in all aspects, we use the method of principal component analysis and analytic hierarchy process to determine synthetically. This process can not only express the subjective will of policy makers, but also avoid the deviation of subjective wishes and the actual situation. In addtion, the original data can be fully utilized.Based on experience, we assume that subjective weights and objective weights are equally important, then the weight of each  indicator is
 \begin{equation}
   W_{ti} = 0.5 W_{si} + 0.5 W_{oi} 
@@ -248,6 +247,88 @@ After then, we make a statistical analysis of the energy status indicators of ea
   \caption{Comprehensive energy status indicator time series} \label{fig: Comprehensive energy status indicator time series}
 \end{figure}
 
+As we can see, the beginning of the rapid economic growth leads to the indicator increasing. However, due to the impact of carbon dioxide emissions on  environmental factors, the indicators of all states began to decrease around 1987. Then, with the concept of sustainable development strengthened, each state proposed its own new energy policy and the indicator began to increase. As we can see in Texas and New Mexico, because of their energetic efforts to develop new energy sources, their indicators were increasing at a relatively faster rate.
+
+Moreover, since there is a large amount of data in each state that affects the similarities and differences between the states, we analyze the renewable energy condition in each of the four states by making time series diagram of different states.
+
+We plot the development trends of various renewable energy categories in Arizona over the past 50 years in figure.\ref{fig: Arizona renewable energy time series}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=12cm]{azre.png}
+  \caption{Arizona renewable energy time series} \label{fig: Arizona renewable energy time series}
+\end{figure}
+
+As we can see, hydropower in Arizona is growing earlier and occupies a significant proportion of all renewable energy sources, followed by wood and waste products. Other renewable energy sources began to develop in the 1980s and 1990s. It is is notable that fuel ethanol and solar power are developing rapidly. By 2009, fuel ethanol consumption exceeded that of wood and waste, making it the second largest consumption of renewable energy.
+
+An analysis of Arizona's geography and climate shows that Arizona has abundant solar energy resources, averaging 300 sunny days a year. However, due to the long-term high cost of photovoltaic energy, the growth rate has gradually slowed down after the initial rapid growth. The current cost of photovoltaic energy is estimated at 0.15-0.25 dollars / kWh, so the development is not satisfactory.\cite{AZretime}
+Although the wind energy in Arizona is developing slowly, its development prospects are good. Located near the eastern edge of Mogollon Rim, eastern Arizona and eastern Arizona are geographically superior and resource-rich. There are also good wind resources on the edges and ridges across the state.\cite{AZwind}
+
+We plot the development trends of various renewable energy categories in California over the past 50 years in figure.\ref{California renewable energy time series}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=12cm]{nmre.png}
+  \caption{California renewable energy time series} \label{fig: California renewable energy time series}
+\end{figure}
+
+The figure shows that California's total renewable energy consumption is huge. All types of renewable energy consumption is similar to that in Arizona, where hydropower accounts for the highest share of all renewable energy sources, followed by wood and waste. Other renewable energy sources began to develop in the 1980s and 1990s. It is is notable that fuel ethanol is developing fastest. Unlike other sources of energy, California's geothermal energy has grown earlier and is consumed much more.
+
+After analyzing the state of California, we can see it clear that the eastern part of California, especially the southern tip and the northeast end is a desert, so there may be more geothermal energy. In addition, due to the large population, there are also many energy consumption.
+
+We plot the development trends of various renewable energy categories in New Mexico over the past 50 years in figure.\ref{fig: New Mexico renewable energy time series}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=12cm]{care.png}
+  \caption{New Mexico renewable energy time series} \label{fig: New Mexico renewable energy time series}
+\end{figure}
+
+As we can see, the state's total renewable energy consumption is less. By 2005, the largest share of renewable energy was wood and waste. Wind energy has grown rapidly since 2005, making it the biggest consumption of renewable energy.
+
+We plot the development trends of various renewable energy categories in Texas over the past 50 years in figure.\ref{fig: Texas renewable energy time series}.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=12cm]{txre.png}
+  \caption{Texas renewable energy time series} \label{fig: Texas renewable energy time series}
+\end{figure}
+
+It can be seen that Texas is very much like New Mexico in the use of wind energy and wood and waste.After analysis of Texas data, we find that at present Texas is the largest state in the United States with the highest wind energy generation. What supers us is taht the wind energy consumptiion has been increased so fast in past ten years. The paper \cite{Langniss2003The} shows that the reason is the state's renewables portfolio standard (RPS), which forces RPS Power suppliers proactively use large-scale wind and other renewable energy to generate electricity.
+
+\subsection{Conclution}
+A comparison of all the figures above demonstrates that Arizona and California are similar, while new Mexico and Texas are similar. Renewable energy sources in Arizona and California account for a large proportion of renewable energy. Wind energy in New Mexico and Texas accounts for a large proportion of renewable energy. As the result of the difference between different states in geography and climate, Arizona mainly develops solar energy while California, imainly developing geothermal energy,  New Mexico and Texas mainly developing wind energy.In addition, each state's fuel ethanol energy has a certain development.
+
+\section{Determing ``best'' profile}
+In order to facilitate the further processing of the following problems, we use gray relational analysis.
+\subsection{gray relational analysis}
+Gray system theory puts forward the concept of analyzing the gray relational degree of each subsystem. It intends to seek the numerical relationship among the subsystems (or factors) in the system through certain methods.
+Therefore, gray relational analysis provides a quantitative measure of a system development trend and is very suitable for dynamic history analysis.\cite{AZretime}
+
+\subsection{Calculation Step}
+First, Identify reference sequences that reflect system behavior characteristics and comparison sequences that affect system behavior.
+The sequence of data that reflects the behavior of the system is called the reference sequence. Factors affecting the behavior of the system composed of data series, is called the comparison sequence.
+
+After obtaining the reference sequence and the comparison sequence, the reference sequence and the comparison sequences should be treated dimensionless.
+Due to the different physical meaning of each factor in the system, the dimensionality of the data is not necessarily the same, which is not convenient for comparison, or it is difficult to get the correct conclusion in comparison. Therefore, in the analysis of grey relational degree, it is generally necessary to conduct dimensionless data processing.
+\newline
+Select reference sequence,
+\begin{equation}
+  x_0 = \{x_0(k) | k=1,2,\cdots,n \} = (x_0(1), x_0(2), \cdots, x_0(n))
+\end{equation}
+Suppose there are m number of comparisons,
+\begin{equation}
+x_i = \{x_i(k) | k=1,2,\cdots,n\} = (x_i(1), x_i(2), \cdots, x_i(n)), i = 1,2,\cdots,m 
+\end{equation}
+Where k represents the moment, a total of n moments.
+
+Before calculating the correlation coefficient, the comparison sequence need to be treated dimensionless. The common dimensionless methods are average method and initialization method.
+What we use is the initialization method.
+Here $ x_i '(k) $ indicates the comparison sequence just screened. $ x_i (k) $ is the new processed comparison sequence.
+
+After that, the gray correlation coefficient $r_i(k)$ between the reference sequence and the comparison sequence can be calculated.
+The so-called correlation coefficient, is substantially between degree of difference curve geometry. Therefore, the size of the difference between the curves can be used as a measure of the degree of association
+For a reference sequence $ x_0 $, there are several comparison sequences $ x_1, x_2, \ cdots, x_m $. The correlation coefficient $ r_i (k) $ of each comparison sequence and the reference sequence at each moment (ie, points in the curve) can be calculated by following formula: Where $\rho$ is the resolution coefficient, generally between 0 to 1, usually take 0.5.
+\begin{equation}
+  r_i(k) = \frac{\min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|}{|x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|},\quad k=1,2,\cdots,n
+\end{equation}
+
 \newpage
 \setcounter{page}{2}
 \pagestyle{fancy} 
@@ -255,7 +336,6 @@ After then, we make a statistical analysis of the energy status indicators of ea
 
 \bibliographystyle{siam}
 \bibliography{ref}
-
 
 
 \begin{appendices}
