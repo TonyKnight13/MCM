@@ -205,7 +205,7 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 
 
 
-\section{Sub-Model.\Rmnum{1}:3E Evaluation Model}
+\section{Sub-Model.\Rmnum{1} :\quad 3E Evaluation Model}
 \subsection{Result and Analysis}
 To describe the energy situation of the four states, first, we need to define an indicator that describes the overall condition of energy.Energy is closely related to the economy and the environment. therefore, the impact of economic and environment can not be ignored as we consider the condition of energy.
 
@@ -301,7 +301,7 @@ In order to facilitate the further processing of the following problems, we use 
 Gray system theory puts forward the concept of analyzing the gray relational degree of each subsystem. It intends to seek the numerical relationship among the subsystems (or factors) in the system through certain methods.
 Therefore, gray relational analysis provides a quantitative measure of a system development trend and is very suitable for dynamic history analysis.\cite{AZretime}
 
-\subsection{Calculation Step}
+\subsection{Steps of Calculation}
 First, Identify reference sequences that reflect system behavior characteristics and comparison sequences that affect system behavior.
 The sequence of data that reflects the behavior of the system is called the reference sequence. Factors affecting the behavior of the system composed of data series, is called the comparison sequence.
 
@@ -327,7 +327,59 @@ The so-called correlation coefficient, is substantially between degree of differ
 For a reference sequence $ x_0 $, there are several comparison sequences $ x_1, x_2, \ cdots, x_m $. The correlation coefficient $ r_i (k) $ of each comparison sequence and the reference sequence at each moment (ie, points in the curve) can be calculated by following formula: Where $\rho$ is the resolution coefficient, generally between 0 to 1, usually take 0.5.
 \begin{equation}
   r_i(k) = \frac{\min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|}{|x_0(k) - x_i(k)| + \rho \times \min\limits_{i} \min\limits_{k}| x_0(k) - x_i(k)|},\quad k=1,2,\cdots,n
+  \label{eq: rik}
 \end{equation}
+In Eq.\ref{eq: rik}, $ \ min \ limits_ {i} \ min \ limits_ {k} | x_0 (k) - x_i (k) |, max \ limits_ {i} \ max \ limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
+
+In the formula, $ \ min \ limits_ {i} \ min \ limits_ {k} | x_0 (k) - x_i (k) |, max \ limits_ {i} \ max \ limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
+Where $ \ rho $ is the resolution coefficient, which is usually taken as (0, 1). The smaller the $ \ rho $, the greater the difference between the correlation coefficients and the stronger the ability to distinguish. Usually take 0.5.
+
+The correlation coefficients defined in the formula describe an indicator of the correlation degree between the comparison sequence and the reference sequence at a certain time. Since there is an association number at each moment, the information is more scattered and it is not convenient to compare. Therefore, we give the formula to calculate the correlation between the comparison sequence and the reference sequence:
+\begin{equation}
+  r_i = \frac{1}{n}\sum\limits_{k=1}^{n}r_i(k) 
+  \label{ri}
+\end{equation}
+According to Eq.\ref{ri} to calculate the relevance of each comparison series and sort.
+
+We select the same relevant indicators for each state here.
+First of all, we select five indicators that appear in all the states, and then assign the weights of the ten main influence indicators in each state, and sort them according to their relevance to the comprehensive evaluation indicators. We pick the largest of the three indicators other than the five mentioned above. So in the end we decide to adopt the following eight indicators:
+PAPRB  NAMPB  NNTCB  FFTCB  TETCB  PATCB  HTCB  WWTCB
+\subsection{Use Topsis to Evaluate}
+Then we evaluated the indicators of the four states using the Topsis method, which is based on the principle\cite{wikitopsis}.
+
+There are n evaluation objects, m evaluation indicators. The original data can be written as a matrix:
+\begin{equation}
+  \mathbf{X} = (X_{ij})_{nm} 
+\end{equation}
+
+The high-quality, low-quality indicators are normalized transformation, that is
+\begin{equation}
+  Z_{ij} = \frac{X_{ij}}{\sqrt{\sum\limits_{i=1}^{n}X_{ij}^2}}
+\end{equation}
+
+After normalizing, we get the matrix
+\begin{equation}
+  \mathbf{Z} = (Z_{ij})_{nm}
+\end{equation}
+
+The maximum and minimum of each column constitute the best and worst vector respectively as:
+\begin{align}
+  \mathbf{Z^+} &= (Z_{max1}, Z_{max2}, \cdots, Z_{maxm})   \\
+  \mathbf{Z^-} &= (Z_{min1}, Z_{min2}, \cdots, Z_{minm})
+\end{align}
+
+The distances between the i-th evaluation object and the optimal scheme and the worst scheme are as follows:
+\begin{align}
+   D_i^+ &= \sqrt{ \sum\limits_{j=1}^m (Z_{maxj} - Z_{ij})^2 } \\
+   D_i^- &= \sqrt{ \sum\limits_{j=1}^m (Z_{minj} - Z_{ij})^2 }
+\end{align}
+
+The approximate degree of the i-th evaluation object and the optimal scheme is $Ci$:
+\begin{equation}
+  C_i = D_i^- / (D_i^+ + D_i^-)
+\end{equation}
+
+Here we use the DPS tool for processing, and the final result is as follows.
 
 \newpage
 \setcounter{page}{2}

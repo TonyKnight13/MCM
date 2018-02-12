@@ -195,7 +195,6 @@ $ k = 1,2,\cdots, k $
 式中$\rho$ 为分辨系数, 一般在(0, 1)内取值，若 $\rho$越小，关联系数间的差异就越大，区分能力就越强。通常取0.5。
 
 In the formula, $ \ min \ limits_ {i} \ min \ limits_ {k} | x_0 (k) - x_i (k) |, max \ limits_ {i} \ max \ limits_ {k} - x_i (k) | $ are the minimum difference between the two levels and the maximum difference between the two levels.
-<!-- 两级最小差及两级最大差 -->
 Where $ \ rho $ is the resolution coefficient, which is usually taken as (0, 1). The smaller the $ \ rho $, the greater the difference between the correlation coefficients and the stronger the ability to distinguish. Usually take 0.5.
 
 式中定义的关联系数是描述比较数列与参考数列在某时刻关联程度的一种指标，由于各个时刻都有一个关联数，因此信息比较分散导致不便于比较，为此我们给出公式计算比较数列与参考数列的关联度
@@ -217,7 +216,7 @@ According to the formula to calculate the relevance of each comparison series an
 PAPRB  NAMPB  NNTCB  FFTCB  TETCB  PATCB  HTCB  WWTCB
 
 In order to facilitate the further processing of the following problems, we use gray relational analysis, selecting the same relevant indicators for each state here.
-First of all, we select five indicators that appear in all the states, and then assign the weights of the ten main influence indicators in each state, and sort them according to their relevance to the comprehensive evaluation indicators. We pick the largest of the three indicators other than the five mentioned above. So in the end we decided to adopt the following eight indicators:
+First of all, we select five indicators that appear in all the states, and then assign the weights of the ten main influence indicators in each state, and sort them according to their relevance to the comprehensive evaluation indicators. We pick the largest of the three indicators other than the five mentioned above. So in the end we decide to adopt the following eight indicators:
 
 PAPRB  NAMPB  NNTCB  FFTCB  TETCB  PATCB  HTCB  WWTCB
 
@@ -232,13 +231,13 @@ $ \mathbf{X} = (X_{ij})_{nm} $.
     
 对高优、低优指标分别进行归一化变换，即
 
-The high-quality, low-quality indicators were normalized transformation, that is
+The high-quality, low-quality indicators are normalized transformation, that is
 
 $ Z_{ij} = \frac{X_{ij}}{\sqrt{\sum\limits_{i=1}^{n}X_{ij}^2}} $.
     
 归一化得到矩阵，
 
-After normalization get the matrix
+After normalizing, weget the matrix
 
 $ \mathbf{Z} = (Z_{ij})_{nm} $.
 
