@@ -207,9 +207,46 @@ We make an energy profile for the four states from 1960 to 2009 in the past 50 y
 
 
 \section{Model}
+\subsection{3E evaluation model}
+To describe the energy situation of the four states, first, we need to define an indicator that describes the overall condition of energy.Energy is closely related to the economy and the environment. therefore, the impact of economic and environment can not be ignored as we consider the condition of energy.
 
+So we study the paper \cite{} and take it into consideration. For energy, we use total energy consumption and clean energy consumption as a proportion of total energy consumption; For economy, we use the GDP of each state and real GDP per capita of each state; For the environment, we use carbon dioxide emissions and temperature data. Finally, these data are integrated to represent our indicators of clean energy.
+For the weight of the two kinds of data in all aspects, we use the method of principal component analysis and analytic hierarchy process to determine synthetically. This process can not only express the subjective will of policy makers, but also avoid the deviation of subjective wishes and the actual situation. In addtion, the original data can be fully utilized.Based on experience, we assume that subjective weights and objective weights are equally important, then the weight of each  indicator is
+\begin{equation}
+  W_{ti} = 0.5 W_{si} + 0.5 W_{oi} 
+\end{equation}
 
+First, we standardize on the six kinds of data. The way We use to standardize is the range-method . Formulas are as follows:\\
 
+For positive indicators,
+
+\begin{equation}
+  Y_i = \frac{X_i - X_{min}}{X_{max} - X_{min}}
+\end{equation}
+
+For negative indicators,
+\begin{equation}
+  Y_i = \frac{X_{max} - X_i}{X_{max} - X_{min}}
+\end{equation}
+
+Therefore, the final calculation formula of energy, economy and environment is 
+\begin{equation}
+  E = \sum_{i=1}^{n} W_{ti} Y_{i} 
+\end{equation}
+
+We assume that energy, economy and environment are equally important to our indicators, so the formula is
+\begin{equation}
+  E^{*} = \frac{E_e + E_c + E_v}{3}
+\end{equation}
+
+The larger this indicator, the better the clean energy condition. Among them, as the reason of that carbon dioxide emissions is positive, the actual calculation need to take the opposite treatment.
+
+After then, we make a statistical analysis of the energy status indicators of each state from 1980 to 2009, and make the figure of comprehensive energy status indicator time series in different states, as shown below.
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=12cm]{b1.png}
+  \caption{Comprehensive energy status indicator time series} \label{fig: Comprehensive energy status indicator time series}
+\end{figure}
 
 \newpage
 \setcounter{page}{2}

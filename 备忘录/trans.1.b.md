@@ -1,24 +1,22 @@
 # Part 1
 
-为了描述四个州的能源状况，首先我们通过自己定义一个描述能源整体状况的的指标。能源由于与经济、环境关系密切，当我们考虑能源时，同时加入经济和环境的影响因素。
+为了描述四个州的能源状况，首先我们需要定义一个描述能源整体状况的的指标。能源由于与经济、环境关系密切，因而，经济和环境在我们考虑能源状况时变得不容忽视
 
-所以我们研究了论文【《能源-经济-环境（3E）系统协调度评价模型研究》】，并综合考虑。对于能源方面，我们采用能源总消耗量和清洁能源消耗占所有能源消耗的比例；对于经济方面，我们采用各个州的GDP以及各个州的人均GDP；对于环境方面，我们采用二氧化碳排放量和温度两种数据。最终这些数据被整合表示我们的指标清洁能源状况。
+所以我们研究了论文【《能源-经济-环境（3E）系统协调度评价模型研究》】，并综合考虑。对于能源方面，我们采用能源总消耗量和清洁能源消耗占所有能源消耗的比例；对于经济方面，我们采用各个州的GDP以及各个州的人均GDP；对于环境方面，我们采用二氧化碳排放量和温度两种数据。最终这些数据被整合表示我们清洁能源状况的指标。
 对于各方面里两种数据的权重，我们采用主成分分析法和层次分析法结合的方法综合确定，这样既可以表达决策者的主观意愿，又避免了主观意愿和实际情况的偏差，同时充分利用原始数据的信息。基于经验，我们设主观权重和客观权重具同等重要，则每种指标权重为
 
 Wti=0.5Wsi+0.5Woi(小写为下标）
 
-To describe the energy situation of the four states, we first define an indicator that describes the overall state of energy.
-Energy is closely related to the economy and the environment, and when we consider energy, we add economic and environmental factors.
-So we study the paper[] and took it into consideration. For energy, we use total energy consumption and clean energy consumption as a proportion of all energy consumption; For the economy, we use the GDP of each state and the per capita GDP of each state; For the environment, we use carbon dioxide emissions and temperature data. Finally, these data are integrated to represent our indicators of clean energy.
+To describe the energy situation of the four states, first, we need to define an indicator that describes the overall condition of energy.Energy is closely related to the economy and the environment. therefore, the impact of economic and environment can not be ignored as we consider the condition of energy.
+So we study the paper \cite{} and take it into consideration. For energy, we use total energy consumption and clean energy consumption as a proportion of total energy consumption; For economy, we use the GDP of each state and real GDP per capita of each state; For the environment, we use carbon dioxide emissions and temperature data. Finally, these data are integrated to represent our indicators of clean energy.
 
-For the weight of the two kinds of data in all aspects, we use the method of principal component analysis and analytic hierarchy process to determine synthetically. This can not only express the subjective will of policy makers, but also avoid the deviation of subjective wishes and the actual situation, while making full use of the information of the original data.
-Based on experience, we assume that subjective weights and objective weights are equally important, then the weight of each index is
+For the weight of the two kinds of data in all aspects, we use the method of principal component analysis and analytic hierarchy process to determine synthetically. This process can not only express the subjective will of policy makers, but also avoid the deviation of subjective wishes and the actual situation. In addtion, the original data can be fully utilized.Based on experience, we assume that subjective weights and objective weights are equally important, then the weight of each  indicator is
 
 $ W_{ti} = 0.5 W_{si} + 0.5 W_{oi} $
 
 首先我们对六种数据做标准化处理。我们采用极差法来进行标准化处理，公式如下
 
-First, we standardize on the six kinds of data. We use the range method to standardize. Formula is as follows:
+First, we standardize on the six kinds of data. The way We use to standardize is the range-method . Formulas are as follows:
 
 For positive indicators,
 <!-- 公式1 -->
@@ -32,7 +30,7 @@ $ Y_i = \frac{X_{max} - X_i}{X_{max} - X_{min}} $
 
 Therefore, the final calculation formula of energy, economy and environment is as follows.
 <!-- 公式3 -->
-$ E = \sum_\limits{i=1}^{n} W_{ti} Y_{i} $
+$ E = \sum^{n}_{I=1} W_{ti} Y_{i} $
 
 我们假定能源、经济与环境对我们的指标有同等的重要程度，因此公式为
 
@@ -42,11 +40,11 @@ $ E^{*} = \frac{E_e + E_c + E_v}{3} $
 
 该指标越大，证明清洁能源状况越好。其中，由于二氧化碳排放量为正值，所以实际计算中要取反处理。
 
-The larger the indicator, the better the clean energy situation. Among them, due to the positive carbon dioxide emissions, so the actual calculation to take the opposite treatment.
+The larger this indicator, the better the clean energy condition. Among them, as the reason of that carbon dioxide emissions is positive, the actual calculation need to take the opposite treatment.
 
 我们对各州1980-2009年的能源状况指标进行统计，做出不同州能源状况指标的的时间序列图
 
-We make a statistical analysis of the energy status indicators of each state from 1980 to 2009, and make the time sequence diagram of energy status indicators in different states, as shown below.
+We make a statistical analysis of the energy status indicators of each state from 1980 to 2009, and make the figure of comprehensive energy status indicator time series in different states, as shown below.
 <!-- 图    各州综合能源状况指标时间序列图 -->
 
 我们可以看到，开始处由于经济的快速增长，指标不断增大。但由于二氧化碳排放量对环境因素影响，在1987年左右各州的指标开始减小。之后随着可持续发展的观念增强，各个州提出自己的新能源政策，指标开始增大。这里可以看到德克萨斯州和新墨西哥州由于大力发展新能源，它们的指标增大速度相对比较明显。
