@@ -86,7 +86,14 @@ As the world's superpower, the US is a big country of energy. Many of America's 
 \end{table}
 
 \subsection{Assumptions}
-
+\begin{itemize}
+  \item Assume that the technology of renewable energy will not be an obstacle to the development of renewable energy.
+  \item Assume that a very significant technological breakthrough will not occur suddenly which may result in that renewable energy source can be widely and easily used.
+  \item Assume that the storage of fossil energy can meet the current trend of fossil energy production.
+  \item Assume that various energy price fluctuations will not change too much.
+  \item Assume that there will be no loss in energy transfer in the current four states.
+  \item Assume that the current energy transfer costs are the same between the four states.
+\end{itemize}
 \section{Energy Profile}
 \subsection{Overview}
 We make an energy profile for the four states from 1960 to 2009 in the past 50 years, which covers four aspects of energy consumption, energy prices, energy expenditures, energy production.As shown in the following figures.
@@ -380,7 +387,97 @@ The approximate degree of the i-th evaluation object and the optimal scheme is $
 \end{equation}
 
 Here we use the DPS tool for processing, and the final result is as follows.
+\begin{table}[H]
+\centering
+\caption{The evaluation results of state by Topsis}
+\label{Topsis}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Sample & $D^+$     & $D-$     & $C_i$     & Rank \\ \hline
+AZ     & 1.9694 & 0.7961 & 0.2879 & 4    \\ \hline
+CA     & 1.7148 & 1.4377 & 0.4561 & 2    \\ \hline
+NM     & 1.8401 & 1.4144 & 0.4346 & 3    \\ \hline
+TX     & 1.7362 & 1.574  & 0.4755 & 1    \\ \hline
+\end{tabular}
+\end{table}
 
+As the Tbl.\ref{Topsis} shows, according to our standards, we conclude that Texas is the best state for clean energy.
+
+\section{Sub-Model.\Rmnum{2} :\quad Energy Status Prediction Model}
+In terms of forecasting energy profile in 2025 and 2050,  we mainly consider overall energy assessment, and the difference value between energy production and consumption. The difference between energy production and consumption is
+\begin{equation}
+  S = PR - PC
+\end{equation}
+where PR is energy production and PC is energy consumption. This value represents the level of the state's surplus of energy, the value greater than zero indicates that the state's energy production value is greater than the consumption value, which means the state can export energy to other states. Value less than zero indicates that the state energy consumption is greater than the production, which means the state need to import energy from other states.
+
+For the prediction model, we use the gray prediction model.
+\subsection{GM(1,1)}
+We use the GM(1,1) model to forecast time-series. GM(1,1) is one of the models of gray theory, which has been 
+utilized in many areas such as the power industry\cite{}.The process of developing the model is shown below.
+    
+The sequence of time-series data is assumed to be
+\begin{equation}
+    X^{(0)}=\{X^{(0)}(1),X^{(0)}(2),X^{(0)}(3),...,X^{0}(n)\}
+\end{equation}
+where n represents the total number of time-series data.
+
+    Use an accumulated generation operation(AGO) on the sequence to get a new squence
+\begin{equation}
+  X^{(1)}(k) = \sum^k_{i=1}X^{(0)}(i),\quad k=1,2,...,n
+\end{equation}
+
+Therefore, the new squence is
+\begin{equation}
+  X^{(1)}=\{X^{(1)}(1),X^{(1)}(2),X^{(1)}(3),...,X^{1}(n)
+\end{equation}
+
+The grey differential equation is ued to develop the GM(1,1) model
+\begin{equation}
+  X^{(0)}(k) + ay^{(1)}(k)=u
+\end{equation}
+where $a$ is the development coefficient; $y^{(0)}$ represents the 
+mean generation with consecutive neighbors sequence of $X^{(1)}$ and its define as,
+\begin{equation}
+  y^{(1)}(k) = \frac12\times\left[y^{(1)}(k) + y^{(1)}(k-1)\right],\quad k=1,2,...,n
+\end{equation}
+
+Use the ordinary least squares method, first-order AGO sequence can be obtained as,
+\begin{equation}
+  X^{(1)}(k)=\left(X^{(0)}(1)-\frac{\hat{u}}{\hat{a}}\right)\times e^{-\hat{a}(k-1)}+\frac{\hat{u}}{\hat{a}}
+\end{equation}
+where $\left[\hat{a},\hat{u}\right]^T$ is equal to $\left(C^TC\right)^{-1}C^TX$
+and
+\begin{equation}
+C=\begin{bmatrix}-y^{(1)}(2)&1\\-y^{(1)}(3)&1\\...&...\\-y^{(1)}(n)&1\end{bmatrix}
+\end{equation}
+and
+\begin{equation}
+  X = \left[X^{(0)}(2),X^{(0)}(2),...,X^{(0)}(n)\right]^T
+\end{equation}
+
+According to the prediction model above, 
+
+
+\section{The Evaluation of Model}
+
+we will discuss the gray prediction model in this section.
+\subsection{Advantages}
+\begin{itemize}
+  \item The model is simple and easy to implement.
+  \item The model is calculated using a professional mathematical analysis software, a higher degree of feasibility.
+  \item The indicators set up take into account a number of factors and are highly integrated.
+\end{itemize}
+\subsection{Disadvantages}
+\begin{itemize}
+  \item The prediction model is too simple to predict well.
+  \item For this problem, there are more external data introduced, and fewer things are created by ourself.
+  \item Not devoting too much time to modify the part of the model, and the center is not prominent enough.
+\end{itemize}
+\subsection{Improvements}
+\begin{itemize}
+  \item For 2009's and previous data, we can combine them with the government policies, the economic crisis and new energy technology breakthroughs to analyze and find the causes of the energy fluctuations in the time series curve, thus making the curve smoother.
+  \item For the goal optimization problem, we can consider the transmission costs between states and make the model closer to the actual situation.
+\end{itemize}
 \newpage
 \setcounter{page}{2}
 \pagestyle{fancy} 
