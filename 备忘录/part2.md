@@ -44,12 +44,12 @@ $ \sum\limits_{i}S_c(i) < \sum\limits_{i}S_p(i) $.
 
 B
 
-针对目标和我们模型求解的结果，提出了以下5个措施
+针对目标和我们模型求解的结果，提出了以下3个措施
 1. 德克萨斯州和新墨西哥州将多余的可再生能源传输给亚利桑那州和加利福尼亚州
 2. 各州在现在能源状况的基础上继续大力发展可再生能源
 3. 加大可再生能源的传输，而减少化石等不可再生能源的传输
 
-The following five measures are proposed according to the results of our goal and our model
+The following three measures are proposed according to the results of our goal and our model
 
 1. Texas and New Mexico transfer excess renewable energy to Arizona and California.
 2. The states continue to vigorously develop renewable energy based on the current energy situation.
