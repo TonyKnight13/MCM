@@ -67,8 +67,7 @@ We chart the development trends of various renewable energy categories in Arizon
 分析亚利桑那州的地理和气候可以发现，亚利桑那州有充沛的太阳能资源，平均每年有300个晴天。但由于光伏能源成本长期较高，所以在经历了初期的快速增长后，增长速度逐渐变缓。目前光伏能源成本估计在0.15-0.25美元/千瓦时，并没有太好的发展。
 【http://www1.eere.energy.gov/solar/myths.html】
 而亚利桑那州的风能发展虽然缓慢，但是发展前景较好。因为''The larger contiguous areas of good-to-excellent resource are located in northern and eastern Arizona close to the eastern edge of the Mogollon Rim. Good-to-excellent wind resources are also found on the higher rims and ridge crests throughout the state.''
-【www.eere.energy.gov/windandhydro/windpoweringamerica/maps_template.asp?stateab=az
-】
+【www.eere.energy.gov/windandhydro/windpoweringamerica/maps_template.asp?stateab=az】
 
 We can see that Arizona has a relatively early development of hydropower and has a high proportion of all renewable energy, and wood and waste energy are secondary. Other renewable sources of energy began to develop in the 1980s and 1990s. Fuel ethanol and solar power are growing rapidly, and by 2009, fuel ethanol consumption exceeded wood and waste consumption, making it the second largest consumption of renewable energy.
 
