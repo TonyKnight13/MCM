@@ -43,10 +43,10 @@ keyword1; keyword2
 \subsection{Statement of the problem}
 Energy production and energy consumption, which can be regarded as an important economic index, not only reflect the industrial development of a country but also relate to the lifehood of a country. But on the other hand, with the continuous advancement and deepening of the industrialization of human civilization, the consumption of non-renewable energy sources such as coal, petroleum is also accelerating. Hence, the development of cleaner renewable energy is particularly important. After all, if humans depend too much on non-renewable energy sources, the day when fossil fuels are depleted is also a day for humankind to return to agrarian society.
 
-As the world's superpower, many of America's energy policy decentralizes to the state level. to ensure cooperative action between the states\cite{州际契约}, many compacts are formed between states. In this context, along the border with Mexico four states, California, Arizona, new Mexico, Texas hope to form a new energy compact focused on more and more widely used, cleaner renewable energy sources.
+As the world's superpower, the US is a big country of energy. Many of America's energy policy decentralizes to the state level. to ensure cooperative action between the states\cite{InterstateCompact}, many compacts are formed between states. In this context, along the border with Mexico four states, California, Arizona, new Mexico, Texas hope to form a new energy compact focused on more and more widely used, cleaner renewable energy sources.
 \begin{itemize}
   \item Create an energy profile for each of the four states.
-  \item Make governors easier to understand the four states’ usage of cleaner, renewable energy sources  and the similarities and difference between the four states.
+  \item Make governors easier to understand the four states'usage of cleaner, renewable energy sources  and the similarities and difference between the four states.
   \item Determine a state that is appeared to have the ``best" profile for use of cleaner, renewable energy in 2009.
   \item Predict the energy profile of each state in 2025 and 2050.
   \item Determine renewable energy usage targets for 2025 and 2050 which are also for the new four-state energy compact.
@@ -60,6 +60,30 @@ As the world's superpower, many of America's energy policy decentralizes to the 
 
 \section{Notations and Assumptions}
 \subsection{Notations}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    Symbol & Specification \\
+    \toprule
+    $T_s$  &  The total energy transferred. \\
+    $T_e$  &  The renewable energy transferred.\\
+    $S_p$  &  The total energy produced.\\
+    $E_p$  &  The renewable energy producted.\\
+    $S_c$  &  The total energe consumed.\\
+    $E_c$  &  The renewable energy consumed.\\
+    $C_i$  &  The proximity of the i-th evaluation object with the optimal solution.\\
+    $D^-_i$  &  The distance between the i-th evaluation object and the worst case.\\
+    $D^+_i$  &  The distance between the i-th evaluation object and the best case.\\
+    $E^*$  &  The energy status indicator.\\
+    $E$    &  The impact of energy, economy or environment.\\
+    $W_{si}$  &  The subjective evaluation weight of indicator I.\\
+    $W_{oi}$  &  The objective evaluation weight of indicator I.\\
+    $W_{ti}$  &  The overall weight of indicator I.\\    
+
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \subsection{Assumptions}
 
@@ -67,10 +91,11 @@ As the world's superpower, many of America's energy policy decentralizes to the 
 
 \section{Energy Profile}
 \subsection{Overview}
+We make an energy profile for the four states from 1960 to 2009 in the past 50 years, which covers four aspects of energy consumption, energy prices, energy expenditures, energy production.As shown in the following figures.
 
-\cite{pr_guide}
-\subsection{title}
+(Note that the following figures labels are five-character series names.The first two letters  represent state code. According to the guide \cite{pr_guide},\cite{use_guide} and \cite{product}, the third and fourth letters like 'TC' means total consumption and 'PR' means product; the fifth letter represents the type of data such as 'B' means consumption in British thermal units (Btu), 'D' means price in dollars per million Btu and 'V' means expenditure in million dollars.Furthemore, the curve represents the change in energy over time.) 
 
+\subsection{Each State}
 \subsubsection{Arizona}
 \begin{figure}[H]
 \begin{minipage}[htb]{0.5\textwidth}
@@ -97,6 +122,7 @@ As the world's superpower, many of America's energy policy decentralizes to the 
 \caption{AZTCV} \label{fig:AZTCV}
 \end{minipage}
 \end{figure}
+
 
 \subsubsection{California}
 \begin{figure}[H]
@@ -180,6 +206,7 @@ As the world's superpower, many of America's energy policy decentralizes to the 
 \end{figure}
 
 
+\section{Model}
 
 
 
