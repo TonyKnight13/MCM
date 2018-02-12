@@ -282,3 +282,25 @@ Here we use the DPS tool for processing, and the final result is as follows.
 如表所示,也就是说通过我们的评判标准，我们得出德克赛斯州是清洁能源状况最好的州。
 
 As the table shows, by our standards, we conclude that Texas is the best state for clean energy.
+
+## D
+
+
+关于预测2025年和2050年的能源配置问题，我们主要考虑了总体能源评价、能源生产和消耗的差值两种指标来描述。
+能源生产和消耗的差值为
+
+In terms of forecasting energy profile in 2025 and 2050, we mainly consider overall energy assessment, and the difference value between energy production and consumption.
+
+The difference between energy production and consumption is
+
+$ S = PR - PC $
+
+其中PR为能源生产，PC为能源消耗。该值代表该州该能源的富余程度，值大于0说明该州能源生产值大于消耗值，可以向其他州出口能源；值小于0说明该州能源消耗量大于生产量，需要从其他州进口能源。
+
+where PR is energy production and PC is energy consumption. This value represents the level of the state's surplus of energy, the value greater than zero indicates that the state's energy production value is greater than the consumption value, and the state can export energy to other states. Value less than zero indicates that the state energy consumption is greater than the production, and the state need to import energy from other states.
+
+关于预测模型，我们采用灰色预测模型
+
+For the prediction model, we use the gray prediction model.
+
+## 灰色预测
